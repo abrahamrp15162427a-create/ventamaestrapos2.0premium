@@ -23,8 +23,8 @@ build/
 Thumbs.db
 .vscode/
 
-# Runtime data (NO subir ventas/clientes)
-data/store.json
+# Runtime data
+# (incluido en Git por solicitud del usuario)
 
 # Temp / export files
 *.zip

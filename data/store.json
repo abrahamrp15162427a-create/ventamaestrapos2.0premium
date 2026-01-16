@@ -1,0 +1,16 @@
+{
+  "users": [
+    {
+      "id": "866f5806-eb6b-4b17-996b-2ab9226ce17f",
+      "email": "abrahamreyesperez804@gmail.com",
+      "name": "Abraham",
+      "plan": "De por vida",
+      "passwordHash": "$2a$10$KLt8QyvPup.xgGN6qEp/te9XDCDGXbdLBxvRQXsVhajqXYQZ84nCa",
+      "createdAt": "2026-01-15T22:17:04.945Z"
+    }
+  ],
+  "products": [],
+  "customers": [],
+  "inventoryMovements": [],
+  "sales": []
+}
