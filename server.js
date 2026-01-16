@@ -10,9 +10,13 @@ const { createUser, normalizeEmail, verifyPassword } = require('./src/auth');
 const PORT = process.env.PORT ? Number(process.env.PORT) : 5500;
 
 const SESSION_SECRET = process.env.SESSION_SECRET || 'dev-only-change-me';
+const IS_PROD = process.env.NODE_ENV === 'production';
 
 const app = express();
 app.disable('x-powered-by');
+
+// Detrás de proxies (Render/NGINX), necesario para cookies secure.
+app.set('trust proxy', 1);
 
 app.use(express.json({ limit: '1mb' }));
 
@@ -39,7 +43,7 @@ app.use(
     secret: SESSION_SECRET,
     httpOnly: true,
     sameSite: 'lax',
-    secure: false,
+    secure: IS_PROD,
     maxAge: 1000 * 60 * 60 * 24 * 14 // 14 días
   })
 );

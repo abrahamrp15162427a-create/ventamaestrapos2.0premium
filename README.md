@@ -43,6 +43,9 @@ Tienes 2 caminos:
 ### A) Publicar “landing” solamente (sin POS real)
 Usa Netlify o GitHub Pages (solo estático). Esto NO incluye login/ventas reales.
 
+Si abres el proyecto en GitHub Pages verás la interfaz, pero el login real fallará (404/405) porque
+GitHub Pages no ejecuta Node/Express.
+
 ### B) Publicar la app completa (POS real)
 Recomendado usar un hosting que corra Node/Express.
 
@@ -50,7 +53,7 @@ Opción 1 (simple): Render.com con Docker
 1) Sube este repo a GitHub.
 2) En Render: New → Blueprint → selecciona el repo.
 3) Render detecta `render.yaml` + `Dockerfile` y despliega.
-4) Te dará una URL `https://...` (ahí ya podrás instalar la PWA en PC/celular).
+4) Te dará una URL `https://...` (ESA es la URL para usar login/POS real y para instalar la PWA).
 
 Importante sobre datos:
 - Ahora guardamos datos en `data/store.json`.
