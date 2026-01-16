@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reportes — VentaMaestra 2.0</title>
+
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="assets/icon.svg" />
+    <link rel="manifest" href="/manifest.webmanifest" />
+
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="module.css" />
+  </head>
+  <body>
+    <header class="site-header" data-elevate>
+      <div class="container header-inner">
+        <a class="brand" href="admin.html" aria-label="Volver al panel">
+          <span class="brand-mark" aria-hidden="true">
+            <img class="brand-icon" src="assets/icon.svg" alt="" width="28" height="28" />
+          </span>
+          <span class="brand-text">
+            <span class="brand-name">Reportes</span>
+            <span class="brand-tag">Resumen</span>
+          </span>
+        </a>
+
+        <div class="header-cta">
+          <a class="btn btn-ghost" href="admin.html">Panel</a>
+          <a class="btn btn-ghost" href="pos.html">POS</a>
+          <button class="btn btn-primary" type="button" data-logout>Salir</button>
+        </div>
+      </div>
+    </header>
+
+    <main class="module">
+      <div class="container">
+        <div class="module-head">
+          <h1>Reportes</h1>
+          <div class="module-actions">
+            <button class="btn btn-primary" type="button" data-refresh>Actualizar</button>
+          </div>
+        </div>
+
+        <section class="grid" style="grid-template-columns: 1fr;">
+          <div class="card">
+            <h2>Resumen</h2>
+            <div class="kpis">
+              <div class="kpi"><div class="muted">Ventas</div><div class="val" data-sales>—</div></div>
+              <div class="kpi"><div class="muted">Ingresos</div><div class="val" data-revenue>—</div></div>
+              <div class="kpi"><div class="muted">Utilidad</div><div class="val" data-profit>—</div></div>
+              <div class="kpi"><div class="muted">Productos</div><div class="val" data-products>—</div></div>
+              <div class="kpi"><div class="muted">Clientes</div><div class="val" data-customers>—</div></div>
+              <div class="kpi"><div class="muted">Stock bajo</div><div class="val" data-low>—</div></div>
+            </div>
+            <p class="muted" style="margin-top: 10px">Próximo: filtros por fecha, tickets, mejores productos, utilidad por categoría.</p>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <script src="app.js" defer></script>
+    <script src="real.js" defer></script>
+    <script src="module.js" defer></script>
+    <script src="reports.js" defer></script>
+    <script src="pwa.js" defer></script>
+  </body>
+</html>

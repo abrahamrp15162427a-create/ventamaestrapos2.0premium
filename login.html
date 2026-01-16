@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Entrar — VentaMaestra 2.0</title>
+    <meta name="description" content="Acceso a la interfaz del Punto de Venta de VentaMaestra 2.0." />
+
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="assets/icon.svg" />
+    <link rel="manifest" href="/manifest.webmanifest" />
+
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="login.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+    <header class="site-header" data-elevate>
+      <div class="container header-inner">
+        <a class="brand" href="index.html#inicio" aria-label="Ir al inicio">
+          <span class="brand-mark" aria-hidden="true">
+            <img class="brand-icon" src="assets/icon.svg" alt="" width="28" height="28" />
+          </span>
+          <span class="brand-text">
+            <span class="brand-name">VentaMaestra 2.0</span>
+            <span class="brand-tag">Acceso al Punto de Venta</span>
+          </span>
+        </a>
+
+        <div class="header-cta">
+          <button class="btn btn-ghost" type="button" data-theme-toggle aria-label="Cambiar tema">Tema</button>
+          <a class="btn btn-ghost" href="index.html#contacto">Contacto</a>
+          <a class="btn btn-primary" href="pos.html">Ir al POS</a>
+        </div>
+      </div>
+    </header>
+
+    <main id="contenido" class="auth">
+      <div class="container">
+        <div class="auth-grid">
+          <section class="auth-card" aria-label="Inicio de sesión">
+            <div class="auth-head">
+              <h1>Entrar al Punto de Venta</h1>
+              <p class="muted">Acceso real con sesión en servidor.</p>
+            </div>
+
+            <form class="form" data-login-form>
+              <label>
+                <span>Email</span>
+                <input name="email" type="email" autocomplete="email" required placeholder="tuemail@ejemplo.com" />
+              </label>
+              <label>
+                <span>Contraseña</span>
+                <input name="password" type="password" autocomplete="current-password" required placeholder="••••••••" />
+              </label>
+
+              <div class="auth-actions">
+                <button class="btn btn-primary" type="submit">Entrar</button>
+                <a class="btn btn-ghost" href="index.html">Volver</a>
+              </div>
+
+              <p class="form-status" aria-live="polite" data-login-status></p>
+              <p class="fineprint">
+                Si no has iniciado sesión, te redirigirá al panel/POS automáticamente.
+              </p>
+            </form>
+          </section>
+
+          <aside class="auth-side" aria-label="Ayuda">
+            <div class="card">
+              <h3>Atajos rápidos</h3>
+              <p class="muted">Dentro del POS:</p>
+              <div class="shortcuts">
+                <div class="shortcut"><span class="kbd">F2</span><span class="shortcut-text">Buscar producto</span></div>
+                <div class="shortcut"><span class="kbd">F9</span><span class="shortcut-text">Cobrar</span></div>
+                <div class="shortcut"><span class="kbd">F10</span><span class="shortcut-text">Corte</span></div>
+              </div>
+            </div>
+
+            <div class="card" style="margin-top: 12px">
+              <h3>¿Qué incluye?</h3>
+              <ul class="list">
+                <li>Venta rápida + tickets</li>
+                <li>Carrito y cobro (demo)</li>
+                <li>Acciones por atajos F2–F10</li>
+              </ul>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </main>
+
+    <script src="app.js" defer></script>
+    <script src="real.js" defer></script>
+    <script src="login.js" defer></script>
+    <script src="pwa.js" defer></script>
+  </body>
+</html>

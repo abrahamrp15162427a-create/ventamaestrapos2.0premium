@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clientes — VentaMaestra 2.0</title>
+
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="assets/icon.svg" />
+    <link rel="manifest" href="/manifest.webmanifest" />
+
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="module.css" />
+  </head>
+  <body>
+    <header class="site-header" data-elevate>
+      <div class="container header-inner">
+        <a class="brand" href="admin.html" aria-label="Volver al panel">
+          <span class="brand-mark" aria-hidden="true">
+            <img class="brand-icon" src="assets/icon.svg" alt="" width="28" height="28" />
+          </span>
+          <span class="brand-text">
+            <span class="brand-name">Clientes</span>
+            <span class="brand-tag">Alta y edición</span>
+          </span>
+        </a>
+
+        <div class="header-cta">
+          <a class="btn btn-ghost" href="admin.html">Panel</a>
+          <a class="btn btn-ghost" href="pos.html">POS</a>
+          <button class="btn btn-primary" type="button" data-logout>Salir</button>
+        </div>
+      </div>
+    </header>
+
+    <main class="module">
+      <div class="container">
+        <div class="module-head">
+          <h1>Clientes</h1>
+          <div class="module-actions">
+            <input class="input" data-q placeholder="Buscar por nombre o teléfono…" />
+            <button class="btn btn-primary" type="button" data-refresh>Actualizar</button>
+          </div>
+        </div>
+
+        <section class="grid">
+          <form class="card" data-form>
+            <h2>Agregar cliente</h2>
+            <label><span>Nombre</span><input class="input" name="name" required /></label>
+            <div class="row2">
+              <label><span>Teléfono</span><input class="input" name="phone" placeholder="(opcional)" /></label>
+              <label><span>Email</span><input class="input" name="email" type="email" placeholder="(opcional)" /></label>
+            </div>
+            <button class="btn btn-primary" type="submit">Guardar</button>
+            <p class="muted" data-status></p>
+          </form>
+
+          <div class="card" style="min-height: 220px">
+            <h2>Listado</h2>
+            <div class="list" data-list></div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <script src="app.js" defer></script>
+    <script src="real.js" defer></script>
+    <script src="module.js" defer></script>
+    <script src="customers.js" defer></script>
+    <script src="pwa.js" defer></script>
+  </body>
+</html>

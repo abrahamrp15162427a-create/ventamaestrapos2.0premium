@@ -1,0 +1,15 @@
+{
+  "name": "ventamaestra-landing",
+  "version": "2.0.0",
+  "private": true,
+  "description": "VentaMaestra 2.0 (landing + app real con backend).",
+  "scripts": {
+    "dev": "node server.js",
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cookie-session": "^2.1.0",
+    "express": "^4.19.2"
+  }
+}

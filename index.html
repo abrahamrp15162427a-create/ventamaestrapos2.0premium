@@ -1,0 +1,605 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VentaMaestra 2.0 — Punto de Venta Administrativo</title>
+    <meta name="description" content="VentaMaestra 2.0: punto de venta administrativo dos en uno (general + restaurante). Control de costos, inventario con caducidades, usuarios/permisos, reportes y atajos de teclado." />
+    <meta name="theme-color" content="#0b1220" />
+
+    <meta property="og:title" content="VentaMaestra 2.0" />
+    <meta property="og:description" content="Punto de venta administrativo dos en uno: abarrotes/refaccionaria/farmacia + restaurante." />
+    <meta property="og:type" content="website" />
+
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="assets/icon.svg" />
+    <link rel="manifest" href="/manifest.webmanifest" />
+
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+    <header class="site-header" data-elevate>
+      <div class="container header-inner">
+        <a class="brand" href="#inicio" aria-label="Ir al inicio">
+          <span class="brand-mark" aria-hidden="true">
+            <img class="brand-icon" src="assets/icon.svg" alt="" width="28" height="28" />
+          </span>
+          <span class="brand-text">
+            <span class="brand-name">VentaMaestra 2.0</span>
+            <span class="brand-tag">Punto de Venta Administrativo</span>
+          </span>
+        </a>
+
+        <nav class="nav" aria-label="Navegación principal" data-nav>
+          <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="navLinks" data-nav-toggle>
+            <span class="sr-only">Abrir menú</span>
+            <span class="nav-toggle-bars" aria-hidden="true"></span>
+          </button>
+
+          <div class="nav-links" id="navLinks" data-nav-links>
+            <a href="#beneficios">Beneficios</a>
+            <a href="#funciones">Módulos</a>
+            <a href="#atajos">Atajos</a>
+            <a href="#modalidades">Dos en uno</a>
+            <a href="#reportes">Reportes</a>
+            <a href="#faq">FAQ</a>
+            <a href="pos.html">POS</a>
+            <a href="#planes">Planes</a>
+            <a href="#contacto">Contacto</a>
+          </div>
+        </nav>
+
+        <div class="header-cta">
+          <button class="btn btn-ghost" type="button" data-theme-toggle aria-label="Cambiar tema">Tema</button>
+          <a class="btn btn-ghost" href="login.html">Entrar</a>
+          <a class="btn btn-ghost" href="#planes">Ver planes</a>
+          <a class="btn btn-primary" href="pos.html">Ir al POS</a>
+        </div>
+      </div>
+    </header>
+
+    <main id="contenido">
+      <section class="hero" id="inicio">
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <p class="eyebrow">Abarrotes • Refaccionaria • Farmacia • Restaurante</p>
+            <h1>VentaMaestra 2.0: tu punto de venta, tu control.</h1>
+            <p class="lead">
+              Sistema administrativo “dos en uno”: punto de venta general + punto de venta para restaurante.
+              Controla costos, ventas, utilidad, inventario con caducidades, usuarios/permisos, promociones y reportes.
+            </p>
+
+            <div class="hero-badges" aria-label="Características clave">
+              <span class="badge-pill">Costos / Utilidad</span>
+              <span class="badge-pill">Caducidades</span>
+              <span class="badge-pill">Promos + Granel</span>
+              <span class="badge-pill">Usuarios + Permisos</span>
+            </div>
+
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="pos.html">Abrir Punto de Venta</a>
+              <a class="btn btn-ghost" href="login.html">Entrar</a>
+            </div>
+
+            <dl class="stats" aria-label="Indicadores">
+              <div class="stat">
+                <dt>Costos y utilidad</dt>
+                <dd><span class="stat-big">Siempre claros</span><span class="stat-sub">compra vs venta</span></dd>
+              </div>
+              <div class="stat">
+                <dt>Atajos</dt>
+                <dd><span class="stat-big">F2–F10</span><span class="stat-sub">venta rápida</span></dd>
+              </div>
+              <div class="stat">
+                <dt>Dos modos</dt>
+                <dd><span class="stat-big">General + Restaurante</span><span class="stat-sub">sin complicarte</span></dd>
+              </div>
+            </dl>
+          </div>
+
+          <div class="hero-card" aria-label="Vista previa">
+            <div class="card-top">
+              <div class="dots" aria-hidden="true">
+                <span></span><span></span><span></span>
+              </div>
+              <span class="chip">Dashboard</span>
+            </div>
+            <div class="card-body">
+              <div class="kpi-grid" aria-hidden="true">
+                <div class="kpi">
+                  <div class="kpi-label">Ventas del mes</div>
+                  <div class="kpi-value">$ 1,284,500</div>
+                  <div class="kpi-trend up">+12.4%</div>
+                </div>
+                <div class="kpi">
+                  <div class="kpi-label">Utilidad del mes</div>
+                  <div class="kpi-value">$ 214,120</div>
+                  <div class="kpi-trend up">+8.1%</div>
+                </div>
+                <div class="kpi">
+                  <div class="kpi-label">Inversión inventario</div>
+                  <div class="kpi-value">$ 482,900</div>
+                  <div class="kpi-trend">actual</div>
+                </div>
+                <div class="kpi">
+                  <div class="kpi-label">Caducidades próximas</div>
+                  <div class="kpi-value">7</div>
+                  <div class="kpi-trend warn">revisar</div>
+                </div>
+              </div>
+
+              <div class="mini-table" aria-hidden="true">
+                <div class="mini-row">
+                  <span class="pill">Venta</span>
+                  <span>Ticket #08411</span>
+                  <span class="right">$ 890</span>
+                </div>
+                <div class="mini-row">
+                  <span class="pill">Cobro</span>
+                  <span>Tarjeta</span>
+                  <span class="right">OK</span>
+                </div>
+                <div class="mini-row">
+                  <span class="pill">Stock</span>
+                  <span>Alerta mínimo</span>
+                  <span class="right">7</span>
+                </div>
+              </div>
+
+              <p class="card-note">
+                Vista previa conceptual. Se adapta a tu negocio (abarrotes, farmacia, refacciones o restaurante).
+              </p>
+
+              <div class="mini-chart" aria-hidden="true">
+                <div class="mini-chart-head">
+                  <span class="muted">Ganancia (7 días)</span>
+                  <span class="chip">+8%</span>
+                </div>
+                <div class="bars">
+                  <span style="--h:46%"></span>
+                  <span style="--h:62%"></span>
+                  <span style="--h:55%"></span>
+                  <span style="--h:78%"></span>
+                  <span style="--h:70%"></span>
+                  <span style="--h:82%"></span>
+                  <span style="--h:88%"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-bg" aria-hidden="true"></div>
+      </section>
+
+      <section class="section" id="beneficios">
+        <div class="container">
+          <div class="section-head">
+            <h2>Beneficios que se notan desde el día 1</h2>
+            <p class="muted">Diseñado para operar rápido y administrar mejor: costos, ventas, inventario y utilidades.</p>
+          </div>
+
+          <div class="grid-3">
+            <article class="feature">
+              <div class="icon" aria-hidden="true">💰</div>
+              <h3>Costos y utilidad</h3>
+              <p>Registra costo de compra y venta por producto. Reportes de utilidad, inversión y ventas totales.</p>
+            </article>
+            <article class="feature">
+              <div class="icon" aria-hidden="true">📦</div>
+              <h3>Inventario con caducidades</h3>
+              <p>Control de stock, alertas, entradas/salidas, caducidad por lote y productos más vendidos.</p>
+            </article>
+            <article class="feature">
+              <div class="icon" aria-hidden="true">🛡️</div>
+              <h3>Usuarios y permisos</h3>
+              <p>Cajeros y administradores con contraseña y permisos específicos para funciones sensibles.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-alt" id="funciones">
+        <div class="container">
+          <div class="section-head">
+            <h2>Módulos principales</h2>
+            <p class="muted">VentaMaestra 2.0 cubre operación y administración: venta rápida, inventario, costos, permisos y reportes.</p>
+          </div>
+
+          <div class="grid-2">
+            <article class="card">
+              <h3>Ventas y cobros</h3>
+              <ul class="list">
+                <li>Contado, crédito y tarjeta (débito/crédito)</li>
+                <li>Búsqueda de tickets y cancelaciones</li>
+                <li>Corte de caja</li>
+              </ul>
+            </article>
+            <article class="card">
+              <h3>Inventario y caducidades</h3>
+              <ul class="list">
+                <li>Stock, mínimos, entradas/salidas</li>
+                <li>Seguimiento de caducidades</li>
+                <li>Productos más vendidos</li>
+              </ul>
+            </article>
+            <article class="card">
+              <h3>Clientes y crédito</h3>
+              <ul class="list">
+                <li>Registro e historial de compras</li>
+                <li>Crédito y contado</li>
+                <li>Edición rápida de datos</li>
+              </ul>
+            </article>
+            <article class="card">
+              <h3>Costos, inversión y utilidad</h3>
+              <ul class="list">
+                <li>Costo compra vs costo venta</li>
+                <li>Utilidad por producto y por periodo</li>
+                <li>Inventario inicial vs final</li>
+              </ul>
+            </article>
+            <article class="card">
+              <h3>Promociones y granel</h3>
+              <ul class="list">
+                <li>Promociones configurables</li>
+                <li>Ventas a granel (por kilo)</li>
+                <li>Ajuste Express</li>
+              </ul>
+            </article>
+            <article class="card">
+              <h3>Catálogo rápido (México)</h3>
+              <ul class="list">
+                <li>Lista predefinida de productos reconocidos</li>
+                <li>Alta más rápida: Coca-Cola, Bimbo, Sabritas…</li>
+                <li>Edita y personaliza a tu negocio</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="atajos">
+        <div class="container">
+          <div class="section-head">
+            <h2>Atajos de teclado</h2>
+            <p class="muted">Operación rápida para caja: todo a un toque.</p>
+          </div>
+
+          <div class="shortcuts">
+            <div class="shortcut"><span class="kbd">F2</span><span class="shortcut-text">Buscar producto</span></div>
+            <div class="shortcut"><span class="kbd">F3</span><span class="shortcut-text">Cancelar venta</span></div>
+            <div class="shortcut"><span class="kbd">F4</span><span class="shortcut-text">Buscar ticket de venta</span></div>
+            <div class="shortcut"><span class="kbd">F5</span><span class="shortcut-text">Ir a punto de venta</span></div>
+            <div class="shortcut"><span class="kbd">F6</span><span class="shortcut-text">Cambiar precio</span></div>
+            <div class="shortcut"><span class="kbd">F7</span><span class="shortcut-text">Ajuste Express</span></div>
+            <div class="shortcut"><span class="kbd">F8</span><span class="shortcut-text">Editar producto</span></div>
+            <div class="shortcut"><span class="kbd">F9</span><span class="shortcut-text">Cobrar (contado/crédito/tarjeta)</span></div>
+            <div class="shortcut"><span class="kbd">F10</span><span class="shortcut-text">Corte de caja</span></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-alt" id="modalidades">
+        <div class="container">
+          <div class="section-head">
+            <h2>Dos en uno: general + restaurante</h2>
+            <p class="muted">Elige el modo por negocio o por sucursal, sin cambiar de sistema.</p>
+          </div>
+
+          <div class="grid-2">
+            <article class="card">
+              <h3>Punto de Venta 1 (General)</h3>
+              <p class="muted">Ideal para abarrotes, refaccionarias y farmacias.</p>
+              <ul class="list">
+                <li>Catálogo rápido con marcas reconocidas</li>
+                <li>Inventario + caducidades + promociones</li>
+                <li>Clientes, crédito y reportes</li>
+              </ul>
+            </article>
+
+            <article class="card">
+              <h3>Punto de Venta 2 (Restaurante)</h3>
+              <p class="muted">Interfaz adaptada a comandas y mesas.</p>
+              <ul class="list">
+                <li>Platillos, bebidas y modificadores (con/sin/agregar/quitar)</li>
+                <li>Seguimiento de mesas y tiempos de servicio</li>
+                <li>Control de órdenes y cobros</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="reportes">
+        <div class="container">
+          <div class="section-head">
+            <h2>Reportes y estadísticas</h2>
+            <p class="muted">Mide lo importante: ventas, inversión, utilidad, inventario y ajustes. Todo con filtros por día/semana/mes.</p>
+          </div>
+
+          <div class="report-grid">
+            <article class="report">
+              <div class="report-top">
+                <div class="report-icon" aria-hidden="true">📊</div>
+                <span class="chip">Ventas</span>
+              </div>
+              <h3>Resumen de ventas</h3>
+              <p class="muted">Ventas totales, ticket promedio, métodos de pago y comparativas por periodo.</p>
+            </article>
+            <article class="report">
+              <div class="report-top">
+                <div class="report-icon" aria-hidden="true">💸</div>
+                <span class="chip">Utilidad</span>
+              </div>
+              <h3>Ganancia del mes</h3>
+              <p class="muted">Costo compra vs venta, utilidad por producto y por familia/categoría.</p>
+            </article>
+            <article class="report">
+              <div class="report-top">
+                <div class="report-icon" aria-hidden="true">🧾</div>
+                <span class="chip">Inventario</span>
+              </div>
+              <h3>Inventario inicial vs final</h3>
+              <p class="muted">Valuación de inventario, mínimos, caducidades y rotación de productos.</p>
+            </article>
+            <article class="report">
+              <div class="report-top">
+                <div class="report-icon" aria-hidden="true">🧰</div>
+                <span class="chip">Control</span>
+              </div>
+              <h3>Ajustes y auditoría</h3>
+              <p class="muted">Ajuste Express, cambios de precio, cancelaciones y movimientos por usuario.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-alt" id="seguridad">
+        <div class="container">
+          <div class="section-head">
+            <h2>Seguridad y permisos</h2>
+            <p class="muted">Define quién puede vender, cancelar, cambiar precios, hacer ajustes y ver reportes.</p>
+          </div>
+
+          <div class="grid-3">
+            <article class="feature">
+              <div class="icon" aria-hidden="true">👤</div>
+              <h3>Usuarios</h3>
+              <p>Alta de cajeros y administradores con contraseña y perfiles.</p>
+            </article>
+            <article class="feature">
+              <div class="icon" aria-hidden="true">🧷</div>
+              <h3>Permisos</h3>
+              <p>Bloquea funciones sensibles: cambio de precio, ajustes, cancelaciones y corte.</p>
+            </article>
+            <article class="feature">
+              <div class="icon" aria-hidden="true">🕵️</div>
+              <h3>Trazabilidad</h3>
+              <p>Registra actividad: quién hizo qué y cuándo (ideal para control interno).</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="giros">
+        <div class="container">
+          <div class="section-head">
+            <h2>Perfecto para tu giro</h2>
+            <p class="muted">Plantilla lista para presentar un sistema que se adapta a diferentes negocios.</p>
+          </div>
+
+          <div class="industry-grid">
+            <article class="industry"><div class="industry-icon" aria-hidden="true">🛒</div><h3>Abarrotes</h3><p class="muted">Catálogo rápido, promociones y granel.</p></article>
+            <article class="industry"><div class="industry-icon" aria-hidden="true">🔧</div><h3>Refaccionaria</h3><p class="muted">Control de inventario y rotación por piezas.</p></article>
+            <article class="industry"><div class="industry-icon" aria-hidden="true">💊</div><h3>Farmacia</h3><p class="muted">Caducidades, lotes y control de mínimos.</p></article>
+            <article class="industry"><div class="industry-icon" aria-hidden="true">🍽️</div><h3>Restaurante</h3><p class="muted">Mesas, comandas y modificadores (con/sin).</p></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-alt" id="testimonios">
+        <div class="container">
+          <div class="section-head">
+            <h2>Se ve profesional, se siente rápido</h2>
+            <p class="muted">Testimonios de ejemplo. Cámbialos por los tuyos cuando tengas clientes.</p>
+          </div>
+
+          <div class="testimonials">
+            <article class="quote">
+              <p>“La caja vuela con los atajos. Lo mejor: ya vemos utilidad real por producto.”</p>
+              <div class="quote-meta"><span class="avatar" aria-hidden="true">A</span><span><strong>Andrea</strong> — Abarrotes</span></div>
+            </article>
+            <article class="quote">
+              <p>“Inventario y caducidades nos evitó mermas. El reporte mensual nos cambió la rutina.”</p>
+              <div class="quote-meta"><span class="avatar" aria-hidden="true">F</span><span><strong>Fernando</strong> — Farmacia</span></div>
+            </article>
+            <article class="quote">
+              <p>“Modo restaurante con modificadores es justo lo que necesitábamos. Menos errores en cocina.”</p>
+              <div class="quote-meta"><span class="avatar" aria-hidden="true">M</span><span><strong>Mariana</strong> — Restaurante</span></div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="planes">
+        <div class="container">
+          <div class="section-head">
+            <h2>Planes</h2>
+            <p class="muted">Ejemplo de estructura de licenciamiento. Se personaliza a tu operación.</p>
+          </div>
+
+          <div class="pricing">
+            <article class="price">
+              <h3>Starter</h3>
+              <p class="price-value">Demo</p>
+              <p class="muted">Para validar el flujo en tu negocio.</p>
+              <ul class="list">
+                <li>Configuración inicial</li>
+                <li>Catálogo básico</li>
+                <li>Soporte por WhatsApp/Email</li>
+              </ul>
+              <a class="btn btn-ghost" href="#contacto">Empezar</a>
+            </article>
+
+            <article class="price price-featured" aria-label="Plan recomendado">
+              <div class="badge">Recomendado</div>
+              <h3>Pro</h3>
+              <p class="price-value">Mensual</p>
+              <p class="muted">Para operación diaria con control total.</p>
+              <ul class="list">
+                <li>Usuarios y permisos</li>
+                <li>Inventario + caducidades + reportes</li>
+                <li>Soporte prioritario</li>
+              </ul>
+              <a class="btn btn-primary" href="#contacto">Solicitar</a>
+            </article>
+
+            <article class="price">
+              <h3>Empresa</h3>
+              <p class="price-value">A medida</p>
+              <p class="muted">Multi-sucursal, integraciones y procesos.</p>
+              <ul class="list">
+                <li>Implementación guiada</li>
+                <li>Integraciones</li>
+                <li>SLA</li>
+              </ul>
+              <a class="btn btn-ghost" href="#contacto">Hablar</a>
+            </article>
+          </div>
+
+          <p class="fineprint">* Los planes son de ejemplo y se pueden personalizar.</p>
+        </div>
+      </section>
+
+      <section class="section" id="faq">
+        <div class="container">
+          <div class="section-head">
+            <h2>Preguntas frecuentes</h2>
+            <p class="muted">Respuestas rápidas para ayudar a decidir.</p>
+          </div>
+
+          <div class="faq">
+            <details class="faq-item">
+              <summary>¿Sirve para abarrotes, refacciones y farmacia?</summary>
+              <p class="muted">Sí. El modo general cubre venta rápida, inventario, caducidades, promociones y reportes.</p>
+            </details>
+            <details class="faq-item">
+              <summary>¿Qué incluye el modo restaurante?</summary>
+              <p class="muted">Interfaz para platillos y bebidas, modificadores (con/sin/agregar/quitar), seguimiento de mesas y control de órdenes.</p>
+            </details>
+            <details class="faq-item">
+              <summary>¿Puedo controlar quién cambia precios o cancela ventas?</summary>
+              <p class="muted">Sí. Maneja usuarios con contraseña y permisos por función (cambio de precio, ajustes, cancelaciones, corte de caja).</p>
+            </details>
+            <details class="faq-item">
+              <summary>¿Puedo ver utilidad y ventas totales?</summary>
+              <p class="muted">Sí. Reportes de ventas, inversión y utilidad por periodo y por producto/categoría.</p>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="cta">
+        <div class="container">
+          <div class="cta">
+            <div class="cta-copy">
+              <h2>Transforma tu negocio con VentaMaestra 2.0</h2>
+              <p class="muted">Operación rápida en caja + control administrativo real. Pruébalo en demo y te lo dejamos a tu medida.</p>
+              <div class="cta-points" aria-label="Puntos clave">
+                <span class="point">Atajos F2–F10</span>
+                <span class="point">Costo/venta/utilidad</span>
+                <span class="point">Caducidades</span>
+                <span class="point">Modo restaurante</span>
+              </div>
+            </div>
+            <div class="cta-actions">
+              <a class="btn btn-primary" href="#contacto">Pedir demo</a>
+              <a class="btn btn-ghost" href="#planes">Ver planes</a>
+              <p class="fineprint">* Respuesta típica en 24–48h.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-alt" id="contacto">
+        <div class="container">
+          <div class="contact">
+            <div>
+              <h2>Contacto</h2>
+              <p class="muted">Déjame tus datos y te preparo una demo de VentaMaestra 2.0. (Por ahora, el formulario abre tu correo; luego lo conectamos a backend.)</p>
+
+              <div class="contact-cards">
+                <div class="small-card">
+                  <div class="small-card-title">Respuesta</div>
+                  <div class="small-card-value">24–48h</div>
+                </div>
+                <div class="small-card">
+                  <div class="small-card-title">Canal</div>
+                  <div class="small-card-value">WhatsApp / Email</div>
+                </div>
+              </div>
+            </div>
+
+            <form class="form" data-contact-form>
+              <label>
+                <span>Nombre</span>
+                <input name="name" type="text" autocomplete="name" required minlength="2" placeholder="Tu nombre" />
+              </label>
+              <label>
+                <span>Empresa (opcional)</span>
+                <input name="company" type="text" autocomplete="organization" placeholder="Nombre del negocio" />
+              </label>
+              <label>
+                <span>Email</span>
+                <input name="email" type="email" autocomplete="email" required placeholder="tucorreo@ejemplo.com" />
+              </label>
+              <label>
+                <span>Mensaje</span>
+                <textarea name="message" rows="4" required minlength="10" placeholder="Cuéntame qué necesitas (ventas, inventario, facturación, etc.)"></textarea>
+              </label>
+
+              <button class="btn btn-primary" type="submit">Enviar</button>
+              <p class="form-status" aria-live="polite" data-form-status></p>
+
+              <p class="fineprint">
+                Al enviar aceptas ser contactado. No se guarda nada en servidor en esta versión.
+              </p>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <button class="to-top" type="button" data-to-top aria-label="Volver arriba">
+      ↑
+    </button>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div>
+          <div class="footer-brand">VentaMaestra 2.0</div>
+          <p class="muted">Punto de Venta Administrativo (general + restaurante).</p>
+        </div>
+
+        <div class="footer-links" aria-label="Enlaces">
+          <a href="#beneficios">Beneficios</a>
+          <a href="#funciones">Funciones</a>
+          <a href="#reportes">Reportes</a>
+          <a href="#faq">FAQ</a>
+          <a href="#planes">Planes</a>
+          <a href="#contacto">Contacto</a>
+        </div>
+
+        <div class="footer-meta">
+          <span>© <span data-year></span> VentaMaestra 2.0</span>
+        </div>
+      </div>
+    </footer>
+
+    <script src="app.js" defer></script>
+    <script src="pwa.js" defer></script>
+  </body>
+</html>

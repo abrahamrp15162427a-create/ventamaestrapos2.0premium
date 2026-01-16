@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Punto de Venta — VentaMaestra 2.0</title>
+    <meta name="description" content="Interfaz del Punto de Venta de VentaMaestra 2.0." />
+
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="assets/icon.svg" />
+    <link rel="manifest" href="/manifest.webmanifest" />
+
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="pos.css" />
+  </head>
+  <body>
+    <header class="site-header" data-elevate>
+      <div class="container header-inner">
+        <a class="brand" href="index.html#inicio" aria-label="Ir a la landing">
+          <span class="brand-mark" aria-hidden="true">
+            <img class="brand-icon" src="assets/icon.svg" alt="" width="28" height="28" />
+          </span>
+          <span class="brand-text">
+            <span class="brand-name">VentaMaestra 2.0</span>
+            <span class="brand-tag">Punto de Venta</span>
+          </span>
+        </a>
+
+        <div class="pos-top">
+          <div class="pos-user" data-pos-user></div>
+          <button class="btn btn-ghost" type="button" data-theme-toggle aria-label="Cambiar tema">Tema</button>
+          <a class="btn btn-ghost" href="index.html">Inicio</a>
+          <button class="btn btn-primary" type="button" data-logout>Salir</button>
+        </div>
+      </div>
+    </header>
+
+    <main class="pos" aria-label="Punto de Venta">
+      <div class="container pos-grid">
+        <section class="pos-panel" aria-label="Búsqueda y productos">
+          <div class="pos-panel-head">
+            <h2>Venta rápida</h2>
+            <span class="chip">Atajos: F2 buscar · F9 cobrar · F3 cancelar</span>
+          </div>
+
+          <div class="pos-search">
+            <input data-search type="text" placeholder="Buscar por nombre o código… (F2)" autocomplete="off" />
+            <button class="btn btn-primary" type="button" data-add-first>Agregar</button>
+          </div>
+
+          <div class="pos-products" data-products aria-label="Listado de productos"></div>
+        </section>
+
+        <aside class="pos-cart" aria-label="Carrito">
+          <div class="pos-cart-head">
+            <h2>Ticket</h2>
+            <div class="pos-cart-actions">
+              <button class="btn btn-ghost" type="button" data-clear>Cancelar (F3)</button>
+              <button class="btn btn-primary" type="button" data-pay>Cobrar (F9)</button>
+            </div>
+          </div>
+
+          <div class="pos-items" data-items></div>
+
+          <div class="pos-totals" aria-label="Totales">
+            <div class="row"><span class="muted">Subtotal</span><strong data-subtotal>$ 0.00</strong></div>
+            <div class="row"><span class="muted">IVA</span><strong data-tax>$ 0.00</strong></div>
+            <div class="row total"><span>Total</span><strong data-total>$ 0.00</strong></div>
+          </div>
+
+          <div class="pos-footer">
+            <p class="muted">Venta real: guarda en servidor y descuenta stock.</p>
+            <div class="shortcuts">
+              <div class="shortcut"><span class="kbd">F4</span><span class="shortcut-text">Buscar ticket</span></div>
+              <div class="shortcut"><span class="kbd">F10</span><span class="shortcut-text">Corte de caja</span></div>
+            </div>
+          </div>
+        </aside>
+      </div>
+
+      <div class="modal" data-modal hidden>
+        <div class="modal-backdrop" data-modal-close></div>
+        <div class="modal-card" role="dialog" aria-modal="true" aria-label="Cobro">
+          <div class="modal-head">
+            <h3>Cobrar</h3>
+            <button class="btn btn-ghost" type="button" data-modal-close>✕</button>
+          </div>
+
+          <div class="modal-body">
+            <div class="pay-grid">
+              <button class="btn btn-primary" type="button" data-pay-method="Contado">Contado</button>
+              <button class="btn btn-ghost" type="button" data-pay-method="Crédito">Crédito</button>
+              <button class="btn btn-ghost" type="button" data-pay-method="Tarjeta">Tarjeta</button>
+            </div>
+
+            <div class="pay-info">
+              <div class="row"><span class="muted">Total</span><strong data-pay-total>$ 0.00</strong></div>
+              <p class="muted">Selecciona un método para finalizar (demo).</p>
+            </div>
+
+            <p class="form-status" aria-live="polite" data-pos-status></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="toast" data-toast hidden></div>
+    </main>
+
+    <script src="app.js" defer></script>
+    <script src="real.js" defer></script>
+    <script src="pos.js" defer></script>
+    <script src="pwa.js" defer></script>
+  </body>
+</html>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="980" height="220" viewBox="0 0 980 220" role="img" aria-label="VentaMaestra 2.0 logo">
+  <defs>
+    <linearGradient id="brand" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#7c5cff"/>
+      <stop offset="0.5" stop-color="#17d4ff"/>
+      <stop offset="1" stop-color="#ff4fd8"/>
+    </linearGradient>
+    <linearGradient id="shine" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.40"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="14" stdDeviation="14" flood-color="#000" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+
+  <!-- Icon -->
+  <g transform="translate(26,26)" filter="url(#shadow)">
+    <rect x="0" y="0" width="168" height="168" rx="52" fill="#070b15"/>
+    <rect x="0" y="0" width="168" height="168" rx="52" fill="url(#shine)"/>
+
+    <path d="M84 28l56 32v60l-56 32-56-32V60l56-32z" fill="url(#brand)" opacity="0.28"/>
+    <path d="M84 44l44 25v46l-44 25-44-25V69l44-25z" fill="url(#brand)" opacity="0.50"/>
+    <path d="M84 60l32 18v34l-32 18-32-18V78l32-18z" fill="url(#brand)"/>
+
+    <path d="M70 92l12 14 28-34" fill="none" stroke="#0a1024" stroke-width="12" stroke-linecap="round" stroke-linejoin="round" opacity="0.9"/>
+    <path d="M70 92l12 14 28-34" fill="none" stroke="#ffffff" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" opacity="0.95"/>
+
+    <circle cx="84" cy="84" r="68" fill="none" stroke="#ffffff" stroke-opacity="0.10" stroke-width="6"/>
+  </g>
+
+  <!-- Wordmark -->
+  <g transform="translate(220,54)">
+    <text x="0" y="62" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial" font-size="64" font-weight="900" fill="#ffffff" letter-spacing="-0.8">
+      Venta<tspan fill="url(#brand)">Maestra</tspan>
+    </text>
+    <g transform="translate(0,82)">
+      <rect x="0" y="0" width="470" height="40" rx="18" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.14)"/>
+      <text x="16" y="27" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial" font-size="18" font-weight="700" fill="rgba(255,255,255,0.86)">
+        Punto de Venta Administrativo
+      </text>
+      <text x="440" y="27" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial" font-size="18" font-weight="900" fill="#ffffff">2.0</text>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inventario — VentaMaestra 2.0</title>
+
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="assets/icon.svg" />
+    <link rel="manifest" href="/manifest.webmanifest" />
+
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="module.css" />
+  </head>
+  <body>
+    <header class="site-header" data-elevate>
+      <div class="container header-inner">
+        <a class="brand" href="admin.html" aria-label="Volver al panel">
+          <span class="brand-mark" aria-hidden="true">
+            <img class="brand-icon" src="assets/icon.svg" alt="" width="28" height="28" />
+          </span>
+          <span class="brand-text">
+            <span class="brand-name">Inventario</span>
+            <span class="brand-tag">Movimientos</span>
+          </span>
+        </a>
+
+        <div class="header-cta">
+          <a class="btn btn-ghost" href="admin.html">Panel</a>
+          <a class="btn btn-ghost" href="pos.html">POS</a>
+          <button class="btn btn-primary" type="button" data-logout>Salir</button>
+        </div>
+      </div>
+    </header>
+
+    <main class="module">
+      <div class="container">
+        <div class="module-head">
+          <h1>Inventario</h1>
+          <div class="module-actions">
+            <button class="btn btn-primary" type="button" data-refresh>Actualizar</button>
+          </div>
+        </div>
+
+        <section class="grid">
+          <form class="card" data-form>
+            <h2>Movimiento</h2>
+            <label><span>Producto</span><select class="input" name="productId" data-product required></select></label>
+            <div class="row2">
+              <label><span>Tipo</span>
+                <select class="input" name="type" required>
+                  <option value="in">Entrada</option>
+                  <option value="out">Salida</option>
+                  <option value="adjust">Ajuste</option>
+                </select>
+              </label>
+              <label><span>Cantidad</span><input class="input" name="qty" type="number" step="1" required /></label>
+            </div>
+            <label><span>Motivo (opcional)</span><input class="input" name="reason" placeholder="Compra, merma, ajuste…" /></label>
+            <button class="btn btn-primary" type="submit">Aplicar</button>
+            <p class="muted" data-status></p>
+          </form>
+
+          <div class="card">
+            <h2>Movimientos</h2>
+            <div class="list" data-moves></div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <script src="app.js" defer></script>
+    <script src="real.js" defer></script>
+    <script src="module.js" defer></script>
+    <script src="inventory.js" defer></script>
+    <script src="pwa.js" defer></script>
+  </body>
+</html>

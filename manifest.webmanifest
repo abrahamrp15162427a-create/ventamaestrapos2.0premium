@@ -1,0 +1,21 @@
+{
+  "name": "VentaMaestra 2.0",
+  "short_name": "VentaMaestra",
+  "description": "Punto de Venta Administrativo (POS) con módulos de productos, clientes, inventario y reportes.",
+  "lang": "es-MX",
+  "start_url": "/login.html",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#050816",
+  "theme_color": "#0b1220",
+  "categories": ["business", "productivity", "finance"],
+  "icons": [
+    {
+      "src": "/assets/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}

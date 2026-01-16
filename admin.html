@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Panel — VentaMaestra 2.0</title>
+
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="assets/icon.svg" />
+    <link rel="manifest" href="/manifest.webmanifest" />
+
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="admin.css" />
+  </head>
+  <body>
+    <header class="site-header" data-elevate>
+      <div class="container header-inner">
+        <a class="brand" href="/" aria-label="Ir al inicio">
+          <span class="brand-mark" aria-hidden="true">
+            <img class="brand-icon" src="assets/icon.svg" alt="" width="28" height="28" />
+          </span>
+          <span class="brand-text">
+            <span class="brand-name">VentaMaestra 2.0</span>
+            <span class="brand-tag">Panel administrativo</span>
+          </span>
+        </a>
+
+        <div class="header-cta">
+          <div class="pill" data-user></div>
+          <button class="btn btn-ghost" type="button" data-theme-toggle aria-label="Cambiar tema">Tema</button>
+          <a class="btn btn-ghost" href="pos.html">POS</a>
+          <button class="btn btn-primary" type="button" data-logout>Salir</button>
+        </div>
+      </div>
+    </header>
+
+    <main class="panel">
+      <div class="container">
+        <div class="panel-head">
+          <h1>Panel</h1>
+          <p class="muted">Módulos completos: productos, clientes, inventario, reportes y punto de venta.</p>
+        </div>
+
+        <section class="summary" aria-label="Resumen">
+          <div class="summary-card">
+            <div class="muted">Ventas</div>
+            <div class="summary-value" data-sales-count>—</div>
+          </div>
+          <div class="summary-card">
+            <div class="muted">Ingresos</div>
+            <div class="summary-value" data-revenue>—</div>
+          </div>
+          <div class="summary-card">
+            <div class="muted">Utilidad</div>
+            <div class="summary-value" data-profit>—</div>
+          </div>
+          <div class="summary-card">
+            <div class="muted">Stock bajo</div>
+            <div class="summary-value" data-low-stock>—</div>
+          </div>
+        </section>
+
+        <section class="modules" aria-label="Módulos">
+          <a class="module" href="products.html">
+            <div class="module-icon">📦</div>
+            <div>
+              <h3>Productos</h3>
+              <p class="muted">Alta/edición, precios, costos, mínimos.</p>
+            </div>
+          </a>
+          <a class="module" href="customers.html">
+            <div class="module-icon">👥</div>
+            <div>
+              <h3>Clientes</h3>
+              <p class="muted">Alta, teléfono/email, historial (base).</p>
+            </div>
+          </a>
+          <a class="module" href="inventory.html">
+            <div class="module-icon">🧾</div>
+            <div>
+              <h3>Inventario</h3>
+              <p class="muted">Entradas/salidas/ajustes, movimientos.</p>
+            </div>
+          </a>
+          <a class="module" href="reports.html">
+            <div class="module-icon">📊</div>
+            <div>
+              <h3>Reportes</h3>
+              <p class="muted">Resumen de ventas, ingresos y utilidad.</p>
+            </div>
+          </a>
+          <a class="module" href="pos.html">
+            <div class="module-icon">🧮</div>
+            <div>
+              <h3>Punto de Venta</h3>
+              <p class="muted">Venta rápida con cobro y tickets (real).</p>
+            </div>
+          </a>
+        </section>
+      </div>
+    </main>
+
+    <script src="app.js" defer></script>
+    <script src="real.js" defer></script>
+    <script src="admin.js" defer></script>
+    <script src="pwa.js" defer></script>
+  </body>
+</html>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-label="VentaMaestra 2.0">
+  <defs>
+    <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#7c5cff"/>
+      <stop offset="0.55" stop-color="#17d4ff"/>
+      <stop offset="1" stop-color="#ff4fd8"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="30%" cy="25%" r="80%">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.35"/>
+      <stop offset="0.5" stop-color="#ffffff" stop-opacity="0.08"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="softShadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="18" stdDeviation="16" flood-color="#000" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+
+  <!-- Background rounded square -->
+  <rect x="36" y="36" width="440" height="440" rx="120" fill="#070b15"/>
+  <rect x="36" y="36" width="440" height="440" rx="120" fill="url(#glow)"/>
+
+  <!-- Mark: layered hex + check -->
+  <g filter="url(#softShadow)">
+    <path d="M256 112l132 74v140l-132 74-132-74V186l132-74z" fill="url(#g1)" opacity="0.25"/>
+    <path d="M256 144l104 58v108l-104 58-104-58V202l104-58z" fill="url(#g1)" opacity="0.45"/>
+    <path d="M256 178l74 42v80l-74 42-74-42v-80l74-42z" fill="url(#g1)"/>
+
+    <!-- Check / success stroke -->
+    <path d="M210 266l26 28 66-74" fill="none" stroke="#0a1024" stroke-width="20" stroke-linecap="round" stroke-linejoin="round" opacity="0.9"/>
+    <path d="M210 266l26 28 66-74" fill="none" stroke="#ffffff" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" opacity="0.95"/>
+  </g>
+
+  <!-- Subtle ring -->
+  <circle cx="256" cy="256" r="176" fill="none" stroke="#ffffff" stroke-opacity="0.08" stroke-width="8"/>
+</svg>

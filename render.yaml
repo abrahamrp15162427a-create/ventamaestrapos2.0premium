@@ -1,0 +1,20 @@
+services:
+  - type: web
+    name: ventamaestra
+    env: docker
+    plan: free
+    autoDeploy: true
+    # Render asigna PORT automáticamente
+    envVars:
+      - key: SESSION_SECRET
+        generateValue: true
+      - key: ADMIN_EMAIL
+        value: abrahamreyesperez804@gmail.com
+      - key: ADMIN_PASSWORD
+        value: 123456789
+      - key: ADMIN_NAME
+        value: Abraham
+      - key: ADMIN_PLAN
+        value: De por vida
+    # Importante: el plan free puede dormir el servicio y el disco persistente puede requerir plan de pago.
+    # Si quieres persistencia real 24/7, usamos un plan con disco o migramos a DB.
