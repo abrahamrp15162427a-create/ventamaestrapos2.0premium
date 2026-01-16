@@ -25,7 +25,18 @@
     }
 
     if (!res.ok) {
-      const msg = data?.error || `Error ${res.status}`;
+      let msg = data?.error || `Error ${res.status}`;
+
+      // Caso común: se abrió con Live Server/GitHub Pages/servidor estático.
+      // En esos entornos no existe el backend Express, y un POST a /api/* suele dar 404/405.
+      if ((res.status === 404 || res.status === 405) && String(path || '').startsWith('/api/')) {
+        msg =
+          'No estás abriendo la app desde el servidor REAL de VentaMaestra.\n\n' +
+          'Solución: en la carpeta del proyecto ejecuta: npm install (una vez) y luego npm run dev.\n' +
+          'Después abre la URL que imprime la terminal (ej: http://localhost:5600/login.html).\n\n' +
+          `URL actual: ${window.location.origin}${window.location.pathname}`;
+      }
+
       const err = new Error(msg);
       err.status = res.status;
       throw err;

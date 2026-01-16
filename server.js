@@ -16,6 +16,11 @@ app.disable('x-powered-by');
 
 app.use(express.json({ limit: '1mb' }));
 
+// Healthcheck (para validar que estás en el servidor correcto)
+app.get('/api/health', (req, res) => {
+  res.json({ ok: true, app: 'VentaMaestra 2.0', time: new Date().toISOString() });
+});
+
 // PWA helpers
 app.get('/manifest.webmanifest', (req, res) => {
   res.type('application/manifest+json');

@@ -11,6 +11,15 @@
 
   if (!form || !window.VMReal) return;
 
+  // Verifica que el backend real está corriendo en este mismo origen.
+  window.VMReal.api('/api/health')
+    .then(() => {
+      // ok
+    })
+    .catch((e) => {
+      setStatus(e.message || 'No se detecta el servidor real.');
+    });
+
   // Si ya hay sesión, redirige.
   window.VMReal.me()
     .then(() => {
